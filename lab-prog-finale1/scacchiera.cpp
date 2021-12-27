@@ -1,0 +1,4 @@
+#include "scacchiera.h"
+
+
+
