@@ -2,6 +2,8 @@
 #include<exception>
 #include <iostream>
 #include<vector>
+#include<exception>
+#include<string>
 
 class traduttore {
     static int traduttoreLetter(char letter);
