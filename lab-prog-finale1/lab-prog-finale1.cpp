@@ -13,7 +13,6 @@
 using namespace std;
 
 int main() {
-    //prova prova new branch
     
     scacchiera board;
 
@@ -80,24 +79,25 @@ int main() {
 
     board.printScacchiera();
 
-    re::moveReCheck("prova");
 
     cout << "" << endl;
 
+    //entrambe 
+
     //traduzione input utente in input array 2d per effettuare il movimento nella scacchiera
-    string inputmovement = "a7 a6";
+    string inputmovement = "a7 A6";
     vector<int> input = traduttore::traduci(inputmovement);
 
-    cout << "input movement: " << inputmovement << endl;
+    //cout << "input movement: " << inputmovement << endl;
 
-    cout << input.at(0) << input.at(1) << input.at(2) << input.at(3) << endl;
+    //cout << input.at(0) << input.at(1) << input.at(2) << input.at(3) << endl;
 
 
     //effettuo check precondizioni e, eventualmente, muovo la pedina
-    if (pedone::movePedoneCapCheck(inputmovement) == true) {
+    /*if (pedone::movePedoneCapCheck(inputmovement) == true) {
         cout << pedone::movePedoneCapCheck(inputmovement) << endl;
         board.movePedina(input.at(0), input.at(1), input.at(2), input.at(3));
-    }
+    }*/
 
     board.printScacchiera();
 }
