@@ -76,6 +76,7 @@ int main() {
     //cout << "Fine partita. Termino programma!" << endl;
     //return 0;
     
+    
 
     board.printScacchiera();
 

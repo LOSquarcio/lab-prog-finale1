@@ -36,7 +36,7 @@
     <ClCompile Include="regina.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="middlePiecesCheck.cpp">
+    <ClCompile Include="middlePieces.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="re.cpp">
@@ -65,7 +65,7 @@
     <ClInclude Include="regina.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="middlePiecesCheck.h">
+    <ClInclude Include="middlePieces.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="re.h">

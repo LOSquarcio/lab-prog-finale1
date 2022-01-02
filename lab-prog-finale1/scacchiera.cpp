@@ -31,8 +31,9 @@ void scacchiera::printScacchiera() {
     }
 }
 
-char scacchiera::getPiece(int orizz, int vert) {
-    return board[vert][orizz];
+char scacchiera::getPiece(int vert, int orizz) {
+    return scacchiera::board[vert][orizz];
+    
 }
 
 
