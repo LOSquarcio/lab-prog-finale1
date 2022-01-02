@@ -62,8 +62,7 @@ std::vector<int> traduttore::traduci(std::string inputMovement) {
             throw std::invalid_argument("");
         }
 
-        std::cout << inputMovement[3] << std::endl;
-        std::cout << validLetters.find(inputMovement[3]) << std::endl;
+       
         fromLetter = traduttore::traduttoreLetter(inputMovement[0]);
         fromNumber = traduttore::traduttoreNumber(inputMovement[1] - '0');
         toLetter = traduttore::traduttoreLetter(inputMovement[3]);

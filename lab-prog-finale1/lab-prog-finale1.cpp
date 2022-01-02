@@ -101,4 +101,9 @@ int main() {
     }*/
 
     board.printScacchiera();
+    //--------------------------
+    //DEBUG RE
+    string s = "D4 A4";
+    cout <<"\n" << "DEBUG RE"<<"\n";
+    cout << "SPOSTO: " << s << "\n" << re::moveReCheck(s);
 }
