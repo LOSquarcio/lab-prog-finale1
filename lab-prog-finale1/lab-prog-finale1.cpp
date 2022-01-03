@@ -101,9 +101,16 @@ int main() {
     }*/
 
     board.printScacchiera();
-    //--------------------------
+    //------------------------------------
     //DEBUG RE
-    string s = "D4 A4";
+    cout << "----------------------"; 
+    string s = "D4 C4";
     cout <<"\n" << "DEBUG RE"<<"\n";
-    cout << "SPOSTO: " << s << "\n" << re::moveReCheck(s);
+    if (re::moveReCheck(s)) cout << "OK!!\n";
+    //DEBUG CAVALLO
+    cout << "----------------------";
+    s = "A4 C3";
+    cout << "\n" << "DEBUG CAVALLO" << "\n";
+    if (cavallo::moveCavalloCheck(s)) cout << "OK!!\n";
+    else cout << "NO!!\n";
 }
