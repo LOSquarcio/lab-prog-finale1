@@ -4,7 +4,7 @@
 
 int traduttore::traduttoreLetter(char letter) {
     int convertedFrom = 0;
-    /*il try - catch dovrebbe essere inutile : alla funzione vengono passati soltanto argomenti
+    /*il try - catch dovrebbe essere inutile: alla funzione vengono passati soltanto argomenti
       corretti, infatti il controllo viene eseguito dalla funzione traduttore::traduci()*/
     try {
         if (letter == 'a' || letter == 'A')
@@ -35,6 +35,7 @@ int traduttore::traduttoreNumber(int number) {
     return 8 - number;
 }
 
+//Funzione TRADUCI
 std::vector<int> traduttore::traduci(std::string inputMovement) {
     const std::string validLetters = "ABCDEFGHabcdefgh";
     const std::string validNumbers = "12345678";
@@ -61,8 +62,9 @@ std::vector<int> traduttore::traduci(std::string inputMovement) {
             std::cout << "Exeption: Input numbers are not valid positions in the board." << std::endl;
             throw std::invalid_argument("");
         }
-
-       
+        //quando uso il traduttore queste righe stampano a schermo il dato
+        //std::cout << inputMovement[3] << std::endl;
+        //std::cout << validLetters.find(inputMovement[3]) << std::endl;
         fromLetter = traduttore::traduttoreLetter(inputMovement[0]);
         fromNumber = traduttore::traduttoreNumber(inputMovement[1] - '0');
         toLetter = traduttore::traduttoreLetter(inputMovement[3]);
@@ -74,4 +76,37 @@ std::vector<int> traduttore::traduci(std::string inputMovement) {
 
     std::vector<int> vector{ fromLetter, fromNumber, toLetter, toNumber };
     return vector;
+}
+
+//Funzione TRADUCI REVERSE INT->STRING
+std::string traduttore::traduttoreLetterRev(int n){
+    std::string letter;
+    if (n == 0)
+        letter = "A";
+    else if (n == 1)
+        letter = "B";
+    else if (n == 2)
+        letter = "C";
+    else if (n == 3)
+        letter = "D";
+    else if (n == 4)
+        letter = "E";
+    else if (n == 5)
+        letter = "F";
+    else if (n == 6)
+        letter = "G";
+    else if (n == 7)
+        letter = "H";
+    return letter;
+}
+
+std::string traduttore::traduttoreNumberRev(int n) {
+    return std::to_string(8 - n);
+}
+
+std::string traduttore::traduciReverse(int fromLetter, int fromNumber, int toLetter, int toNumber) {
+    std::string s1=traduttore::traduttoreLetterRev(fromLetter)+traduttoreNumberRev(fromNumber);
+    std::string s2=traduttore::traduttoreLetterRev(toLetter) + traduttoreNumberRev(toNumber);
+    
+    return s1+" "+s2;
 }
